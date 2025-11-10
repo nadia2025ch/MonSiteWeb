@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nadia Chakroun - CV 🌸</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000; /* 🌑 Fond noir fixe */
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #ffb6b9;
+      box-shadow: 0 0 20px #ffb6b9;
+      margin-bottom: 20px;
+      animation: fadeIn 1.5s ease forwards;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo:hover {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 0 35px #ff6b6b;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ffb6b9;
+      text-shadow: 0 0 15px #ff6b6b, 0 0 30px #ff8c8c;
+      margin-bottom: 10px;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 1.8em;
+      color: #ff8c8c;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      text-decoration-thickness: 2px;
+      animation: fadeUp 1.2s ease forwards;
+    }
+
+    p, li {
+      font-size: 17px;
+      line-height: 1.6;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1.3s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px 25px;
+      border-radius: 15px;
+      margin: 20px 0;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0 0 15px rgba(255, 182, 185, 0.2);
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px rgba(255, 182, 185, 0.4);
+    }
+
+    ul {
+      list-style: "🌸 ";
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    footer {
+      margin-top: 30px;
+      opacity: 0.8;
+      font-style: italic;
+      font-size: 15px;
+      text-align: center;
+      color: #ffb6b9;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); opacity: 0.8; }
+      100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- 🌸 Photo de profil -->
+  <div class="photo">
+    <img src="photoCV.jpg" alt="Photo de Nadia Chakroun">
+  </div>
+
+  <h1>Nadia Chakroun</h1>
+
+  <p><strong>Profil :</strong> Étudiante en deuxième année de licence d’informatique, créative et curieuse, passionnée par l’art et la conception. Je cherche à combiner ma formation en informatique avec ma passion pour la création : design numérique, modélisation ou tout autre domaine mêlant technologie et imagination.</p>
+
+  <div class="section">
+    <h2>🎓 Formations Académiques</h2>
+    <ul>
+      <li><strong>2025-2026</strong> — L2 Informatique, Université d’Évry Paris-Saclay  
+        <br>• SGBD | Théorie des langages | Développement web | Anglais | Probabilités | Programmation fonctionnelle | Algèbre & Arithmétique</li>
+      <li><strong>2024-2025</strong> — L1 Informatique, Université d’Évry Paris-Saclay  
+        <br>• Analyse réelle | Langage mathématique | Informatique générale | Programmation Java | Algèbre linéaire & géométrie | Électronique numérique | Développement web | Architecture & programmation</li>
+      <li><strong>2022-2023</strong> — Baccalauréat Informatique, Sayada (Tunisie)  
+        <br>• Python | Physique | Analyse | Probabilité | Arithmétique | HTML | CSS | JavaScript | PHP | SGBD | Éducation plastique | Philosophie | Anglais | Français | Arabe</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>💼 Expériences Professionnelles</h2>
+    <ul>
+      <li><strong>Animatrice</strong> — Club artistique pour enfants (Sayada, Tunisie)
+        <br>• Encadrement d’un groupe d’enfants (6–12 ans)
+        <br>• Initiation au dessin, à la modélisation et au coloriage en argile
+        <br>• Développement de la créativité, de la patience et du travail en groupe
+      </li>
+    </ul>
+  </div>
+
+  <footer> --Page CV-- </footer>
+</body>
+</html>

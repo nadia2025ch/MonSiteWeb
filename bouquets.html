@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bouquets des satin 🌸</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: #000;
+    color: white;
+    padding: 20px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    color: #ffb6b9;
+    text-shadow: 0 0 10px #ff6b6b;
+  }
+
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .D {
+    width: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .D:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff6b6b;
+  }
+
+  .D img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 10px;
+  }
+
+  /* ===== Lightbox ===== */
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+  }
+
+  .lightbox.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #ff6b6b;
+    animation: popIn 0.3s ease;
+  }
+
+  @keyframes popIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #ff6b6b;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .close-btn:hover {
+    transform: scale(1.2);
+  }
+
+</style>
+</head>
+<body>
+
+<h2>Bouquets en satin 🌸</h2>
+
+<div class="images">
+  <div class="D"><img src="B1.jpg" alt="bq1"></div>
+  <div class="D"><img src="B2.jpg" alt="bq2"></div>
+  <div class="D"><img src="B3.jpg" alt="bq3"></div>
+  <div class="D"><img src="B4.jpg" alt="bq4"></div>
+  <div class="D"><img src="B5.jpg" alt="bq5"></div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <span class="close-btn" onclick="closeLightbox()">×</span>
+  <img src="" alt="Image agrandie" id="lightbox-img">
+</div>
+<script>
+  const images = document.querySelectorAll('.D img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.classList.add('active');
+      lightboxImg.src = img.src;
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+  }
+
+  // fermer au clic sur le fond
+  lightbox.addEventListener('click', e => {
+    if(e.target !== lightboxImg) {
+      closeLightbox();
+    }
+  });
+</script>
+
+
+</body>
+</html>

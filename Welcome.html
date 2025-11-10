@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenue 🌸</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      background-color: #000; /* 🌑 Fond noir fixe */
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    h1, p, footer {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1.2s ease forwards;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      color: #ffb6b9;
+      text-shadow: 0 0 15px #ff6b6b, 0 0 30px #ff8c8c;
+      animation-delay: 0.2s;
+    }
+
+    p {
+      max-width: 650px;
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 10px 20px;
+      animation-delay: 0.6s;
+    }
+
+    p:nth-of-type(2) {
+      animation-delay: 1s;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-style: italic;
+      opacity: 0.8;
+      font-size: 16px;
+      color: #ffb6b9;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 🌸 Bulles décoratives flottantes */
+    .bubble {
+      position: absolute;
+      bottom: -50px;
+      background: rgba(255, 182, 185, 0.25);
+      border-radius: 50%;
+      animation: float 10s infinite ease-in;
+      pointer-events: none;
+      box-shadow: 0 0 15px rgba(255, 182, 185, 0.3);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); opacity: 0.8; }
+      100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenue sur mon profil 🌸</h1>
+  <p>Je suis une étudiante passionnée par le dessin, les compositions florales et la création avec de l’argile autodurcissante. Je suis très motivée et toujours animée par le désir de rendre les choses plus belles. <br>Pour en savoir plus, cliquez sur ☰</p>
+  <p>J’espère que vous apprécierez mes créations !</p>
+  <footer>Ce site web présente seulement une partie de mes créations </footer>
+
+</body>
+</html>
